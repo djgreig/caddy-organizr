@@ -7,7 +7,7 @@ LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DA
 LABEL maintainer="dgreig"
 
 ARG CADDY_ARCH="amd64"
-ARG CADDY_PLUGS="http.ipfilter,http.login,http.jwt,tls,tls.dns.cloudflare"
+ARG CADDY_PLUGS="http.ipfilter,http.login,http.jwt,tls.dns.cloudflare"
 
 RUN \
  echo "**** install packages ****" && \
