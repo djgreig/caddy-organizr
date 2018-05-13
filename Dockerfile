@@ -16,8 +16,6 @@ RUN \
 	git \
 	libcap \
 	inotify-tools && \
-apk add --no-cache \
-	curl \
 	php7-curl \
 	php7-ldap \
 	php7-pdo_sqlite \
