@@ -15,7 +15,7 @@ RUN \
 	curl \
 	git \
 	libcap \
-	inotify-tools && \
+	inotify-tools \
 	php7-curl \
 	php7-ldap \
 	php7-pdo_sqlite \
