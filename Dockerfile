@@ -13,11 +13,11 @@ RUN \
  echo "**** install packages ****" && \
  apk add --no-cache \
 	curl \
+	git \
 	libcap \
 	inotify-tools && \
 apk add --no-cache \
 	curl \
-	git \
 	php7-curl \
 	php7-ldap \
 	php7-pdo_sqlite \
