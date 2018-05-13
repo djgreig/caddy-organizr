@@ -1,0 +1,21 @@
+#!/usr/bin/with-contenv bash
+
+# make our folders
+mkdir -p \
+	/config/www
+
+# copy config
+[[ $(find /config/www -type f | wc -l) -eq 0 ]] && \
+	cp /defaults/index.html /config/www/index.html
+[[ ! -f /config/Caddyfile ]] && \
+	cp /defaults/Caddyfile /config/Caddyfile
+
+# permissions
+chown -R abc:abc /config
+
+# fetch site
+[[ ! -d /config/www/Dashboard/.git ]] && \
+git clone https://github.com/causefx/Organizr /config/www/Dashboard
+
+# permissions
+chown -R abc:abc /config
