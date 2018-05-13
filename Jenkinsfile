@@ -3,7 +3,6 @@ node {
 
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
-
         checkout scm
     }
 
@@ -11,7 +10,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("caddy-organizr")
+        app = docker.build("caddy-organizr/caddy-organizr-img")
     }
 
     stage('Test image') {
