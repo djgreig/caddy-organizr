@@ -15,6 +15,15 @@ RUN \
 	curl \
 	libcap \
 	inotify-tools && \
+apk add --no-cache \
+	curl \
+	git \
+	php7-curl \
+	php7-ldap \
+	php7-pdo_sqlite \
+	php7-sqlite3 \
+	php7-session \
+	php7-zip \
  echo "**** install caddy and plugins ****" && \
  curl -o \
  /tmp/caddy.tar.gz -L \
