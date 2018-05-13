@@ -10,7 +10,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("caddy-organizr/caddy-organizr-img")
+        app = docker.build("caddy-organizr")
     }
 
     stage('Test image') {
