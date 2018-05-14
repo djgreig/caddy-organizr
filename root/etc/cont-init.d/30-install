@@ -10,12 +10,9 @@ mkdir -p \
 [[ ! -f /config/Caddyfile ]] && \
 	cp /defaults/Caddyfile /config/Caddyfile
 
-# permissions
-chown -R abc:abc /config
-
 # fetch site
 [[ ! -d /config/www/Dashboard/.git ]] && \
-git clone https://github.com/causefx/Organizr /config/www/Dashboard
+git clone https://github.com/causefx/Organizr /config/www/organizr/
 
 # permissions
 chown -R abc:abc /config
