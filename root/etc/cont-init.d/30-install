@@ -11,7 +11,7 @@ mkdir -p \
 	cp /defaults/Caddyfile /config/Caddyfile
 
 # fetch site
-[[ ! -d /config/www/Dashboard/.git ]] && \
+[[ ! -d /config/www/organizr/.git ]] && \
 git clone https://github.com/causefx/Organizr /config/www/organizr/
 
 # permissions
