@@ -2,6 +2,6 @@
 
 exec \
 	s6-setuidgid abc /usr/local/bin/caddy -agree \
-	-conf /config/Caddyfile && \
-	php-fpm7
+	-conf /config/Caddyfile
+	exec php-fpm7
 
