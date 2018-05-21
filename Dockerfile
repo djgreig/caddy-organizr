@@ -6,7 +6,7 @@ ARG VERSION
 LABEL maintainer="dgreig"
 
 ARG CADDY_ARCH="amd64"
-ARG CADDY_PLUGS="http.ipfilter,http.login,http.jwt,tls.dns.cloudflare"
+ARG CADDY_PLUGS="http.ipfilter,http.login,http.jwt,tls.dns.cloudflare,http.reauth"
 
 RUN \
 
