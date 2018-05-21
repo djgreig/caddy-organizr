@@ -10,8 +10,7 @@ ARG CADDY_PLUGS="http.ipfilter,http.login,http.jwt,tls.dns.cloudflare"
 
 RUN \
 
- echo "**** install build packages ****" && \
-
+ echo "**** install packages ****" && \
  apk add --no-cache \
 	apache2-utils \
 	git \
@@ -40,9 +39,6 @@ RUN \
 	php7-zip \
 	php7-cgi \
 	php7-zlib && \
-    echo "**** install packages ****" && \
- apk add --no-cache \
- && \
  echo "**** install caddy and plugins ****" && \
  curl -o \
  /tmp/caddy.tar.gz -L \
