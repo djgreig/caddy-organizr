@@ -1,4 +1,4 @@
 
 #!/usr/bin/with-contenv bash
 
-exec /usr/bin/php-fpm7
+exec /usr/bin/php-fpm7 -F
