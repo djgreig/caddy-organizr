@@ -1,5 +1,4 @@
 0.0.0.0:80
-root /config/www
+root /config/www/organizr
 
 fastcgi / 127.0.0.1:9000 php # php variant only
-on startup php-fpm7 # php variant only
