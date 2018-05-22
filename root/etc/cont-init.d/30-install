@@ -14,5 +14,9 @@ mkdir -p \
 [[ ! -d /config/www/organizr/.git ]] && \
 git clone https://github.com/causefx/Organizr /config/www/organizr/
 
+# fix permisions on php-frm
+sed -i 's/user = nobody/user = abc/g' /etc/php7/php-fpm.d/www.conf
+sed -i 's/group = nobody/group = abc/g' /etc/php7/php-fpm.d/www.conf
+
 # permissions
 chown -R abc:abc /config
