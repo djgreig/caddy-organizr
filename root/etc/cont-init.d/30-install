@@ -9,10 +9,19 @@ mkdir -p \
 [[ ! -f /config/Caddyfile ]] && \
 	cp /defaults/Caddyfile /config/Caddyfile
 
-# fetch site
-[[ ! -d /config/www/organizr/.git ]] && \
-git clone -b v2-develop --single-branch https://github.com/causefx/Organizr /config/www/organizr
-#git clone https://github.com/causefx/Organizr /config/www/organizr/
+if [[ ! -d /config/www/Dashboard/.git ]]; then
+  echo '-----------------------'
+  echo '| Installing Organizr |'
+  echo '-----------------------'
+  git clone -b v2-develop https://github.com/causefx/Organizr /config/www/organizr
+elif [[ -d /config/www/Dashboard/.git ]]; then
+  echo '-----------------------'
+  echo '|  Updating Organizr  |'
+  echo '-----------------------'
+  cd /config/www/organizr || return
+  git reset --hard origin/v2-develop
+  git pull --rebase
+fi
 
 # fix permisions on php-frm
 sed -i 's/user = nobody/user = abc/g' /etc/php7/php-fpm.d/www.conf
