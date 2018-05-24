@@ -1,5 +1,4 @@
 #!/usr/bin/with-contenv bash
-
 # make our folders
 mkdir -p \
 	/config/www
@@ -12,7 +11,8 @@ mkdir -p \
 
 # fetch site
 [[ ! -d /config/www/organizr/.git ]] && \
-git clone https://github.com/causefx/Organizr /config/www/organizr/
+git clone -b v2-develop --single-branch https://github.com/causefx/Organizr /config/www/organizr
+#git clone https://github.com/causefx/Organizr /config/www/organizr/
 
 # fix permisions on php-frm
 sed -i 's/user = nobody/user = abc/g' /etc/php7/php-fpm.d/www.conf
