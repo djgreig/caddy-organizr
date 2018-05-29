@@ -9,12 +9,12 @@ mkdir -p \
 [[ ! -f /config/Caddyfile ]] && \
 	cp /defaults/Caddyfile /config/Caddyfile
 
-if [[ ! -d /config/www/Dashboard/.git ]]; then
+if [[ ! -d /config/www/organizr/.git ]]; then
   echo '-----------------------'
   echo '| Installing Organizr |'
   echo '-----------------------'
   git clone -b v2-develop https://github.com/causefx/Organizr /config/www/organizr
-elif [[ -d /config/www/Dashboard/.git ]]; then
+elif [[ -d /config/www/organizr/.git ]]; then
   echo '-----------------------'
   echo '|  Updating Organizr  |'
   echo '-----------------------'
